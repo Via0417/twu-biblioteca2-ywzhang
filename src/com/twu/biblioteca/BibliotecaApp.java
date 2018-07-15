@@ -26,8 +26,10 @@ public class BibliotecaApp {
         //list book in details
         println("Id\tBook\tAuthor\tYear");
         for (Book book : bookList){
-            println(book.getId() + "\t" + book.getName() + "\t"
-                    + book.getAuthor() + "\t" + book.getYear());
+            if(!book.isChecked()){
+                println(book.getId() + "\t" + book.getName() + "\t"
+                        + book.getAuthor() + "\t" + book.getYear());
+            }
         }
 
         //Main menu
